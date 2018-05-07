@@ -1,0 +1,69 @@
+{
+  "name": "university.social_frontend",
+  "description": "",
+  "version": "1.0.0",
+  "author": "mori minako",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-vertical-tabs": "^1.2.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-autocomplete": "^1.8.1",
+    "react-dom": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
+    "react-icons": "^2.2.7",
+    "react-navigation": "^1.0.3",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.0.17",
+    "react-string-replace": "^0.4.1",
+    "reactstrap": "^5.0.0-beta",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.1",
+    "rodal": "^1.6.3",
+    "string-similarity": "^1.2.0",
+    "styled-components": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "node-plop": "^0.5.5",
+    "plop": "^1.7.4",
+    "prettier": "^1.8.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --single-quote --print-width=120 --trailing-comma es5 --no-semi",
+    "format": "npm run prettier -- --write '{,!(build|generators)/**/}*.js'",
+    "precommit": "lint-staged",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "lint": "eslint **/*.js --quiet",
+    "lint-fix": "eslint --fix",
+    "generate": "plop --plopfile generators/index.js"
+  },
+  "lint-staged": {
+    "{,!(build|generators)/**/}*.js": [
+      "npm run prettier -- --write",
+      "git add"
+    ]
+  },
+  "engines": {
+    "npm": ">=4",
+    "node": ">=6"
+  }
+}
